@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:round2meal_website/widgets/gallery_image.dart';
 
@@ -17,7 +16,7 @@ class GallerySection extends StatelessWidget {
 
     return Container(
       color: const Color(0xff0d0d0d),
-      padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 100),
+      padding: const EdgeInsets.symmetric(vertical: 100),
       child: Column(
         children: [
           Text(
@@ -38,48 +37,52 @@ class GallerySection extends StatelessWidget {
 
           const SizedBox(height: 60),
 
-          MasonryGridView.count(
-            crossAxisCount: 2,
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            mainAxisSpacing: 25,
-            crossAxisSpacing: 25,
-            itemCount: images.length,
+          SizedBox(
+            height: 400,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 100),
+              itemCount: images.length,
+              separatorBuilder: (_, __) => const SizedBox(width: 25),
 
-            itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () {
-                  showDialog(
-                    context: context,
+              itemBuilder: (context, index) {
+                return GestureDetector(
+                  onTap: () {
+                    showDialog(
+                      context: context,
 
-                    builder: (_) => Dialog(
-                      backgroundColor: Colors.transparent,
-                      insetPadding: const EdgeInsets.all(40),
+                      builder: (_) => Dialog(
+                        backgroundColor: Colors.transparent,
+                        insetPadding: const EdgeInsets.all(40),
 
-                      child: Hero(
-                        tag: images[index],
+                        child: Hero(
+                          tag: images[index],
 
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(25),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(25),
 
-                          child: InteractiveViewer(
-                            child: Image.asset(
-                              images[index],
-                              fit: BoxFit.contain,
+                            child: InteractiveViewer(
+                              child: Image.asset(
+                                images[index],
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
 
-                child: Hero(
-                  tag: images[index],
-                  child: GalleryImage(image: images[index]),
-                ),
-              );
-            },
+                  child: Hero(
+                    tag: images[index],
+                    child: SizedBox(
+                      width: 550,
+                      child: GalleryImage(image: images[index]),
+                    ),
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),
