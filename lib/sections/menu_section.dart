@@ -37,7 +37,7 @@ class MenuSection extends StatelessWidget {
             children: const [
               Expanded(
                 child: MenuCard(
-                  image: "lib/assets/images/pizza.png",
+                  image: "lib/assets/images/pizza.jpg",
                   title: "Margherita Pizza",
                   price: "₹249",
                 ),
@@ -47,7 +47,7 @@ class MenuSection extends StatelessWidget {
 
               Expanded(
                 child: MenuCard(
-                  image: "lib/assets/images/dalbaati.png",
+                  image: "lib/assets/images/dalbaati.jpg",
                   title: "Dal Baati Churma",
                   price: "₹299",
                 ),
@@ -57,7 +57,7 @@ class MenuSection extends StatelessWidget {
 
               Expanded(
                 child: MenuCard(
-                  image: "lib/assets/images/coffee.png",
+                  image: "lib/assets/images/coffee.webp",
                   title: "Cold Coffee",
                   price: "₹149",
                 ),
