@@ -17,6 +17,7 @@ class MobileDrawer extends StatelessWidget {
               child: Image.asset(
                 "lib/assets/images/logo.png",
                 height: 100,
+                cacheHeight: 200,
                 errorBuilder: (context, error, stackTrace) {
                   return Text(
                     "ROUND2MEAL",

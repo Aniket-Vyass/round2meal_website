@@ -16,7 +16,7 @@ class FooterSection extends StatelessWidget {
             "ROUND2MEAL",
             style: GoogleFonts.playfairDisplay(
               color: const Color(0xffD4AF37),
-              fontSize: 40,
+              fontSize: 38,
               fontWeight: FontWeight.bold,
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GlassNavbar extends StatelessWidget {
   const GlassNavbar({super.key});
@@ -17,7 +18,25 @@ class GlassNavbar extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("lib/assets/images/logo.png", height: isMobile ? 90 : 140),
+            Image.asset(
+              "lib/assets/images/logo.png",
+              height: isMobile ? 90 : 140,
+              cacheHeight: isMobile ? 180 : 280,
+              errorBuilder: (context, error, stackTrace) {
+                debugPrint("Navbar logo load error: $error");
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Text(
+                    "ROUND2MEAL",
+                    style: GoogleFonts.playfairDisplay(
+                      color: const Color(0xffD4AF37),
+                      fontSize: isMobile ? 20 : 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                );
+              },
+            ),
 
             const Spacer(),
 
