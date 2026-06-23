@@ -6,24 +6,34 @@ class FeatureStrip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final bool isMobile = screenWidth < 850;
+
     return Container(
       color: const Color(0xff0d0d0d),
-      padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 35),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
-          FeatureTile(icon: Icons.map_outlined, title: "Lake View"),
-          FeatureTile(icon: Icons.local_pizza_rounded, title: "Delicious Food"),
-          FeatureTile(icon: Icons.coffee_rounded, title: "Cozy Ambience"),
-          FeatureTile(
-            icon: Icons.sentiment_satisfied_alt_rounded,
-            title: "Great Service",
-          ),
-          FeatureTile(
-            icon: Icons.family_restroom_rounded,
-            title: "Family Friendly",
-          ),
-        ],
+      padding: EdgeInsets.symmetric(
+        horizontal: isMobile ? 20 : 80,
+        vertical: isMobile ? 25 : 35,
+      ),
+      child: Center(
+        child: Wrap(
+          alignment: WrapAlignment.spaceEvenly,
+          spacing: isMobile ? 15 : 30,
+          runSpacing: 25,
+          children: const [
+            FeatureTile(icon: Icons.map_outlined, title: "Lake View"),
+            FeatureTile(icon: Icons.local_pizza_rounded, title: "Delicious Food"),
+            FeatureTile(icon: Icons.coffee_rounded, title: "Cozy Ambience"),
+            FeatureTile(
+              icon: Icons.sentiment_satisfied_alt_rounded,
+              title: "Great Service",
+            ),
+            FeatureTile(
+              icon: Icons.family_restroom_rounded,
+              title: "Family Friendly",
+            ),
+          ],
+        ),
       ),
     );
   }

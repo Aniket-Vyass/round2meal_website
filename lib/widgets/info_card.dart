@@ -6,9 +6,12 @@ class InfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final bool isMobile = screenWidth < 900;
+
     return Container(
-      height: 250,
-      width: 320,
+      height: isMobile ? null : 250,
+      width: isMobile ? (screenWidth - 40).clamp(280, 500) : 320,
       padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
 
       decoration: BoxDecoration(

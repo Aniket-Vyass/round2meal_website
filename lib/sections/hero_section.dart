@@ -1,6 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:round2meal_website/sections/hero_content.dart';
 import 'package:round2meal_website/widgets/glass_navbar.dart';
 import 'package:round2meal_website/widgets/info_card.dart';
@@ -10,9 +9,12 @@ class HeroSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final bool isMobile = screenWidth < 900;
+
     return SizedBox(
       width: double.infinity,
-      height: 500,
+      height: isMobile ? 800 : 550,
 
       child: Stack(
         children: [
@@ -46,7 +48,7 @@ class HeroSection extends StatelessWidget {
                 viewportFraction: 1,
                 height: double.infinity,
                 autoPlay: true,
-                autoPlayInterval: Duration(seconds: 5),
+                autoPlayInterval: const Duration(seconds: 5),
                 enlargeCenterPage: false,
               ),
             ),
@@ -65,9 +67,14 @@ class HeroSection extends StatelessWidget {
 
           // Floating Card
           Positioned(
-            right: MediaQuery.of(context).size.width * .08,
-            top: MediaQuery.of(context).size.height * .25,
-            child: const InfoCard(),
+            left: isMobile ? 20 : null,
+            right: isMobile ? 20 : screenWidth * .08,
+            bottom: isMobile ? 35 : null,
+            top: isMobile ? null : 180,
+            child: const Align(
+              alignment: Alignment.center,
+              child: InfoCard(),
+            ),
           ),
         ],
       ),

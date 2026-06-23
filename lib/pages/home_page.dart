@@ -7,6 +7,7 @@ import 'package:round2meal_website/sections/menu_section.dart';
 import 'package:round2meal_website/sections/reservation_section.dart';
 import 'package:round2meal_website/sections/reviews_section.dart';
 import 'package:round2meal_website/widgets/feature_strip.dart';
+import 'package:round2meal_website/widgets/mobile_drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,6 +16,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff090909),
+      drawer: const MobileDrawer(),
 
       body: SingleChildScrollView(
         child: Column(

@@ -7,8 +7,12 @@ class ReservationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final bool isMobile = screenWidth < 900;
+
     return Container(
-      height: 850,
+      height: isMobile ? null : 850,
+      padding: isMobile ? const EdgeInsets.symmetric(vertical: 50, horizontal: 15) : EdgeInsets.zero,
 
       decoration: const BoxDecoration(
         image: DecorationImage(
@@ -28,8 +32,8 @@ class ReservationSection extends StatelessWidget {
               filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
 
               child: Container(
-                width: 700,
-                padding: const EdgeInsets.all(50),
+                width: isMobile ? (screenWidth - 30).clamp(280, 700) : 700,
+                padding: EdgeInsets.all(isMobile ? 20 : 50),
 
                 decoration: BoxDecoration(
                   color: Colors.black.withOpacity(.3),
@@ -47,9 +51,10 @@ class ReservationSection extends StatelessWidget {
                       "RESERVE YOUR TABLE",
                       style: GoogleFonts.playfairDisplay(
                         color: const Color(0xffD4AF37),
-                        fontSize: 52,
+                        fontSize: isMobile ? 28 : 52,
                         fontWeight: FontWeight.bold,
                       ),
+                      textAlign: TextAlign.center,
                     ),
 
                     const SizedBox(height: 20),
@@ -58,11 +63,12 @@ class ReservationSection extends StatelessWidget {
                       "Book your perfect dining experience",
                       style: GoogleFonts.poppins(
                         color: Colors.white70,
-                        fontSize: 18,
+                        fontSize: isMobile ? 15 : 18,
                       ),
+                      textAlign: TextAlign.center,
                     ),
 
-                    const SizedBox(height: 50),
+                    SizedBox(height: isMobile ? 30 : 50),
 
                     textField("Name"),
 
@@ -86,11 +92,11 @@ class ReservationSection extends StatelessWidget {
 
                     textField("Guests"),
 
-                    const SizedBox(height: 40),
+                    SizedBox(height: isMobile ? 30 : 40),
 
                     Container(
                       width: double.infinity,
-                      height: 65,
+                      height: 60,
 
                       decoration: BoxDecoration(
                         color: const Color(0xffD4AF37),
@@ -103,7 +109,7 @@ class ReservationSection extends StatelessWidget {
                           style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
-                            fontSize: 17,
+                            fontSize: isMobile ? 15 : 17,
                           ),
                         ),
                       ),

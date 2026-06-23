@@ -7,6 +7,9 @@ class GallerySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final bool isMobile = screenWidth < 900;
+
     final images = [
       "lib/assets/images/hero.png",
       "lib/assets/images/indoor.png",
@@ -16,34 +19,39 @@ class GallerySection extends StatelessWidget {
 
     return Container(
       color: const Color(0xff0d0d0d),
-      padding: const EdgeInsets.symmetric(vertical: 100),
+      padding: EdgeInsets.symmetric(vertical: isMobile ? 60 : 100),
       child: Column(
         children: [
           Text(
             "GALLERY",
             style: GoogleFonts.playfairDisplay(
               color: const Color(0xffD4AF37),
-              fontSize: 55,
+              fontSize: isMobile ? 36 : 55,
               fontWeight: FontWeight.bold,
             ),
+            textAlign: TextAlign.center,
           ),
 
           const SizedBox(height: 20),
 
           Text(
             "Experience the beauty of Round2Meal",
-            style: GoogleFonts.poppins(color: Colors.white60, fontSize: 18),
+            style: GoogleFonts.poppins(
+              color: Colors.white60,
+              fontSize: isMobile ? 15 : 18,
+            ),
+            textAlign: TextAlign.center,
           ),
 
-          const SizedBox(height: 60),
+          SizedBox(height: isMobile ? 40 : 60),
 
           SizedBox(
-            height: 400,
+            height: isMobile ? 250 : 400,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 100),
+              padding: EdgeInsets.symmetric(horizontal: isMobile ? 20 : 100),
               itemCount: images.length,
-              separatorBuilder: (_, __) => const SizedBox(width: 25),
+              separatorBuilder: (_, __) => SizedBox(width: isMobile ? 15 : 25),
 
               itemBuilder: (context, index) {
                 return GestureDetector(
@@ -53,7 +61,7 @@ class GallerySection extends StatelessWidget {
 
                       builder: (_) => Dialog(
                         backgroundColor: Colors.transparent,
-                        insetPadding: const EdgeInsets.all(40),
+                        insetPadding: const EdgeInsets.all(20),
 
                         child: Hero(
                           tag: images[index],
@@ -76,7 +84,7 @@ class GallerySection extends StatelessWidget {
                   child: Hero(
                     tag: images[index],
                     child: SizedBox(
-                      width: 550,
+                      width: isMobile ? 320 : 550,
                       child: GalleryImage(image: images[index]),
                     ),
                   ),
