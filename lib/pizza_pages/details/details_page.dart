@@ -1,19 +1,19 @@
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter/material.dart';
-import 'package:pizza_ui_animation/models/pizza.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/description_widget.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/image_widget.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/ingredients_widget.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/price_widget.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/rating_widget.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/sheets/checkout_sheet.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/sheets/discount_sheet.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/sheets/order_ready_sheet.dart';
-import 'package:pizza_ui_animation/pages/details/widgets/title_widget.dart';
-import 'package:pizza_ui_animation/pages/home/home_page.dart';
-import 'package:pizza_ui_animation/utils/fade_transition.dart';
-import 'package:pizza_ui_animation/widgets/back_button.dart';
-import 'package:pizza_ui_animation/widgets/veg_nonveg_widget.dart';
+import 'package:round2meal_website/pages/home_page.dart';
+import 'package:round2meal_website/pizza_pages/details/description_widget.dart';
+import 'package:round2meal_website/pizza_pages/details/image_widget.dart';
+import 'package:round2meal_website/pizza_pages/details/ingridients_widget.dart';
+import 'package:round2meal_website/pizza_pages/details/pizza_widgets/sheets/checkout_sheet.dart';
+import 'package:round2meal_website/pizza_pages/details/pizza_widgets/sheets/discount_sheet.dart';
+import 'package:round2meal_website/pizza_pages/details/pizza_widgets/sheets/order_ready_sheet.dart';
+import 'package:round2meal_website/pizza_pages/details/price_widget.dart';
+import 'package:round2meal_website/pizza_pages/details/rating_widget.dart';
+import 'package:round2meal_website/pizza_pages/home/widgets/back_button.dart';
+import 'package:round2meal_website/pizza_pages/home/widgets/title_widget.dart';
+import 'package:round2meal_website/utils/fade_transition.dart';
+import 'package:round2meal_website/widgets/pizza.dart';
+import 'package:round2meal_website/widgets/veg_nonveg_button.dart';
 
 class DetailsPage extends StatefulWidget {
   final Pizza pizza;
