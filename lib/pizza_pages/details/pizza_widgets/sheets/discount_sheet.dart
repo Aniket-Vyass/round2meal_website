@@ -30,7 +30,7 @@ class DiscountSheet extends StatelessWidget {
               child: Stack(
                 children: [
                   SvgPicture.asset(
-                    "assets/images/discount.svg",
+                    "lib/assets/icons/discount.svg",
                     height: 25,
                     width: 25,
                     colorFilter: const ColorFilter.mode(

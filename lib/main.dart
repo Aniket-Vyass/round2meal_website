@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:round2meal_website/pizza_pages/home/pizza_home_page.dart';
 import 'pages/home_page.dart';
 
 void main() async {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Round2Meal",
-      home: HomePage(),
+      home: PizzaHomePage(),
     );
   }
 }

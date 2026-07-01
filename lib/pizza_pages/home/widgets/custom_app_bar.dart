@@ -12,7 +12,7 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SvgPicture.asset(
-            "assets/icons/menu.svg",
+            "lib/assets/icons/menu.svg",
             width: 40,
             height: 40,
             colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
@@ -22,7 +22,7 @@ class CustomAppBar extends StatelessWidget {
             smallSize: 8,
             backgroundColor: const Color(0xFFFF7A12),
             child: SvgPicture.asset(
-              "assets/icons/bell.svg",
+              "lib/assets/icons/bell.svg",
               width: 30,
               height: 30,
               colorFilter: const ColorFilter.mode(

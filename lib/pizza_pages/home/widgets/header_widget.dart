@@ -50,7 +50,7 @@ class HeaderWidget extends StatelessWidget {
                   ),
                 ),
                 SvgPicture.asset(
-                  "assets/icons/search.svg",
+                  "lib/assets/icons/search.svg",
                   colorFilter: const ColorFilter.mode(
                     Colors.grey,
                     BlendMode.srcIn,

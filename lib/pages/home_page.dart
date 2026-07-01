@@ -9,8 +9,8 @@ import 'package:round2meal_website/sections/reviews_section.dart';
 import 'package:round2meal_website/widgets/feature_strip.dart';
 import 'package:round2meal_website/widgets/mobile_drawer.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {

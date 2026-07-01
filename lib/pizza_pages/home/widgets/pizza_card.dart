@@ -68,7 +68,7 @@ class PizzaCard extends StatelessWidget {
                     children: [
                       // Heart Icon
                       SvgPicture.asset(
-                        "assets/icons/favourite.svg",
+                        "lib/assets/icons/favourite.svg",
                         width: 20,
                         colorFilter: const ColorFilter.mode(
                           Colors.black,

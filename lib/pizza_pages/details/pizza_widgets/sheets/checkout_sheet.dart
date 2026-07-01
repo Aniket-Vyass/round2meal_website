@@ -76,7 +76,7 @@ class CheckoutSheet extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SvgPicture.asset(
-                      "assets/icons/location.svg",
+                      "lib/assets/icons/location.svg",
                       height: 18,
                       colorFilter: const ColorFilter.mode(
                         Colors.grey,

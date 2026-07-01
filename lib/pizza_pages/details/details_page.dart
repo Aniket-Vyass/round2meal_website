@@ -9,6 +9,7 @@ import 'package:round2meal_website/pizza_pages/details/pizza_widgets/sheets/disc
 import 'package:round2meal_website/pizza_pages/details/pizza_widgets/sheets/order_ready_sheet.dart';
 import 'package:round2meal_website/pizza_pages/details/price_widget.dart';
 import 'package:round2meal_website/pizza_pages/details/rating_widget.dart';
+import 'package:round2meal_website/pizza_pages/home/pizza_home_page.dart';
 import 'package:round2meal_website/pizza_pages/home/widgets/back_button.dart';
 import 'package:round2meal_website/pizza_pages/home/widgets/title_widget.dart';
 import 'package:round2meal_website/utils/fade_transition.dart';
@@ -77,7 +78,7 @@ class _DetailsPageState extends State<DetailsPage>
             if (!mounted) return;
             Navigator.pushAndRemoveUntil(
               context,
-              createFadeRoute(const HomePage()),
+              createFadeRoute(const PizzaHomePage()),
               (route) => false,
             );
           },
