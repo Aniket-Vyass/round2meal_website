@@ -20,7 +20,7 @@ class Pizza {
 
 final List<Pizza> pizzas = [
   Pizza(
-    image: "assets/images/dynamite_philly_cheese_steak_pizza.png",
+    image: "lib/assets/images/dynamite_philly_cheese_steak_pizza.png",
     title: "Dynamite Philly Cheese Steak Pizza",
     price: 19,
     rating: 4.0,
@@ -39,7 +39,7 @@ final List<Pizza> pizzas = [
   ),
 
   Pizza(
-    image: "assets/images/chicken_legend_ranch_jalapeno_pizza.png",
+    image: "lib/assets/images/chicken_legend_ranch_jalapeno_pizza.png",
     title: "Chicken Legend Ranch & Jalapeno Pizza",
     price: 15,
     rating: 4.5,
@@ -57,7 +57,7 @@ final List<Pizza> pizzas = [
     ],
   ),
   Pizza(
-    image: "assets/images/rustic_spicy_italian_herb_pizza.png",
+    image: "lib/assets/images/rustic_spicy_italian_herb_pizza.png",
     title: "Rustic Spicy Italian Herb Pizza",
     price: 12,
     rating: 3.8,
@@ -75,7 +75,7 @@ final List<Pizza> pizzas = [
     ],
   ),
   Pizza(
-    image: "assets/images/classic_ultimate_pepperoni_feast_pizza.png",
+    image: "lib/assets/images/classic_ultimate_pepperoni_feast_pizza.png",
     title: "Classic Ultimate Pepperoni Feast Pizza",
     price: 22,
     rating: 4.8,

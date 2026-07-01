@@ -135,7 +135,7 @@ class _DetailsPageState extends State<DetailsPage>
             child:
                 Center(
                       child: Image.asset(
-                        "assets/images/open-box.png",
+                        "lib/assets/images/open-box.png",
                         width: 350,
                         height: 350,
                         fit: BoxFit.contain,
@@ -260,7 +260,7 @@ class _DetailsPageState extends State<DetailsPage>
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8),
                           child: Image.asset(
-                            "assets/images/top-box.png",
+                            "lib/assets/images/top-box.png",
                             width: 250,
                             height: 250,
                             fit: BoxFit.contain,

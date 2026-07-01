@@ -103,7 +103,7 @@ class CheckoutSheet extends StatelessWidget {
               // Payment
               Row(
                 children: [
-                  Image.asset("assets/images/mastercard.png", height: 15),
+                  Image.asset("lib/assets/images/mastercard.png", height: 15),
                   const SizedBox(width: 8),
                   Text(
                     "**** 0404",
